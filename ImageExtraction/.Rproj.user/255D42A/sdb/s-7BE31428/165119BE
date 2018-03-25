@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1521944987880.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "165119BE",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1521944987880,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "EBC217FA",
+        "caption" : "DataSet",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=DataSet&cache_key=EBC217FA",
+        "displayedObservations" : 2000,
+        "environment" : "",
+        "object" : "DataSet",
+        "preview" : 0,
+        "totalObservations" : 2000,
+        "variables" : 32
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

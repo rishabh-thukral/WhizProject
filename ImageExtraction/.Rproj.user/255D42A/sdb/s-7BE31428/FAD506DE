@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(\"minerva\")\nlibrary(\"e1071\")\nrm(list = ls())\n\n#Get Data\nsId <- 1:2000\nsId <- paste0(\"SID\",sId)\nDataSet <- data.frame(matrix(nrow = 2000,ncol = 32),row.names = sId)\ncolnames(DataSet) <- paste0(\"F\",(1:32))\nnumber_of_qn <- 28\ni<-1;\nwhile(i < 33){\n  DataSet[,i] <- round(rnorm(2000,mean = 10,sd = 5))\n  DataSet[,1+i] <- DataSet[,i]*DataSet[,i] + DataSet[,i]\n  DataSet[,2+i] <- round(exp(DataSet[,i]))\n  DataSet[,3+i] <- number_of_qn * sigmoid(DataSet[,i])*sigmoid(DataSet[,i+2])\n  i<-i+4\n}\nDataSet <- round(DataSet)\n# DataSet <- scale(DataSet,center = FALSE,\n#                  scale = apply(DataSet,2,max))\n# \n# DataSet <- DataSet*number_of_qn\nRelationship <- mine(DataSet)\n#Model Relationship between vars\nprint(Relationship$MIC)\n#Difference in MIC and PEarson Correl\nprint(Relationship$MICR2)\n#Periodicity/Asymmetry\nprint(Relationship$MAS)\n",
+    "created" : 1521943513156.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2309341008",
+    "id" : "FAD506DE",
+    "lastKnownWriteTime" : 1521946129,
+    "last_content_update" : 1521946714491,
+    "path" : "~/Whiz Project/ImageExtraction/Phase2.R",
+    "project_path" : "Phase2.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
